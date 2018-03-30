@@ -1,0 +1,253 @@
+fileFormatVersion: 2
+guid: c6af0afa7e9e7774cae2e3f0a5a00ebe
+timeCreated: 1522243399
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Bone
+    100002: Bone 1
+    100004: Bone 2
+    100006: Bone 3
+    100008: Bone 4
+    100010: Bone 5
+    100012: Bone.001
+    100014: Bone.001 1
+    100016: Bone.001 2
+    100018: Bone.001 3
+    100020: Bone.001 4
+    100022: Bone.001 5
+    100024: Bone.002
+    100026: Bone.002 1
+    100028: Bone.002 2
+    100030: Bone.002 3
+    100032: Bone.002 4
+    100034: Bone.002 5
+    100036: Bone.002_end
+    100038: Bone.002_end 1
+    100040: Bone.002_end 2
+    100042: Bone.002_end 3
+    100044: Bone.002_end 4
+    100046: Bone.002_end 5
+    100048: Cube
+    100050: Cube.001
+    100052: Cube.002
+    100054: Cube.003
+    100056: Cube.004
+    100058: Cube.005
+    100060: Cube.006
+    100062: Cube.007
+    100064: IK0
+    100066: IK0 1
+    100068: IK0 2
+    100070: IK0 3
+    100072: IK0 4
+    100074: IK0 5
+    100076: IK0_end
+    100078: IK0_end 1
+    100080: IK0_end 2
+    100082: IK0_end 3
+    100084: IK0_end 4
+    100086: IK0_end 5
+    100088: leg_l_0
+    100090: leg_l_1
+    100092: leg_l_2
+    100094: leg_r_0
+    100096: leg_r_1
+    100098: leg_r_2
+    100100: Plane
+    100102: //RootNode
+    400000: Bone
+    400002: Bone 1
+    400004: Bone 2
+    400006: Bone 3
+    400008: Bone 4
+    400010: Bone 5
+    400012: Bone.001
+    400014: Bone.001 1
+    400016: Bone.001 2
+    400018: Bone.001 3
+    400020: Bone.001 4
+    400022: Bone.001 5
+    400024: Bone.002
+    400026: Bone.002 1
+    400028: Bone.002 2
+    400030: Bone.002 3
+    400032: Bone.002 4
+    400034: Bone.002 5
+    400036: Bone.002_end
+    400038: Bone.002_end 1
+    400040: Bone.002_end 2
+    400042: Bone.002_end 3
+    400044: Bone.002_end 4
+    400046: Bone.002_end 5
+    400048: Cube
+    400050: Cube.001
+    400052: Cube.002
+    400054: Cube.003
+    400056: Cube.004
+    400058: Cube.005
+    400060: Cube.006
+    400062: Cube.007
+    400064: IK0
+    400066: IK0 1
+    400068: IK0 2
+    400070: IK0 3
+    400072: IK0 4
+    400074: IK0 5
+    400076: IK0_end
+    400078: IK0_end 1
+    400080: IK0_end 2
+    400082: IK0_end 3
+    400084: IK0_end 4
+    400086: IK0_end 5
+    400088: leg_l_0
+    400090: leg_l_1
+    400092: leg_l_2
+    400094: leg_r_0
+    400096: leg_r_1
+    400098: leg_r_2
+    400100: Plane
+    400102: //RootNode
+    2100000: No Name
+    2100002: Material
+    2100004: Material.001
+    2300000: Cube
+    2300002: Cube.001
+    2300004: Plane
+    3300000: Cube
+    3300002: Cube.001
+    3300004: Plane
+    4300000: Plane
+    4300002: Cube
+    4300004: Cube.001
+    4300006: Cube.003
+    4300008: Cube.002
+    4300010: Cube.004
+    4300012: Cube.006
+    4300014: Cube.007
+    4300016: Cube.005
+    7400000: leg_r_2|leg_r_0.001Action
+    7400002: leg_r_2|leg_r_0.002Action
+    7400004: leg_r_2|leg_r_0.003Action
+    7400006: leg_r_2|leg_r_0.004Action
+    7400008: leg_r_2|leg_r_0.005Action
+    7400010: leg_r_2|leg_r_0Action
+    7400012: leg_r_0|leg_r_0.001Action
+    7400014: leg_r_0|leg_r_0.002Action
+    7400016: leg_r_0|leg_r_0.003Action
+    7400018: leg_r_0|leg_r_0.004Action
+    7400020: leg_r_0|leg_r_0.005Action
+    7400022: leg_r_0|leg_r_0Action
+    7400024: leg_r_1|leg_r_0.001Action
+    7400026: leg_r_1|leg_r_0.002Action
+    7400028: leg_r_1|leg_r_0.003Action
+    7400030: leg_r_1|leg_r_0.004Action
+    7400032: leg_r_1|leg_r_0.005Action
+    7400034: leg_r_1|leg_r_0Action
+    7400036: leg_l_2|leg_r_0.001Action
+    7400038: leg_l_2|leg_r_0.002Action
+    7400040: leg_l_2|leg_r_0.003Action
+    7400042: leg_l_2|leg_r_0.004Action
+    7400044: leg_l_2|leg_r_0.005Action
+    7400046: leg_l_2|leg_r_0Action
+    7400048: leg_l_1|leg_r_0.001Action
+    7400050: leg_l_1|leg_r_0.002Action
+    7400052: leg_l_1|leg_r_0.003Action
+    7400054: leg_l_1|leg_r_0.004Action
+    7400056: leg_l_1|leg_r_0.005Action
+    7400058: leg_l_1|leg_r_0Action
+    7400060: leg_l_0|leg_r_0.001Action
+    7400062: leg_l_0|leg_r_0.002Action
+    7400064: leg_l_0|leg_r_0.003Action
+    7400066: leg_l_0|leg_r_0.004Action
+    7400068: leg_l_0|leg_r_0.005Action
+    7400070: leg_l_0|leg_r_0Action
+    7400072: Scene
+    9500000: //RootNode
+    13700000: Cube.002
+    13700002: Cube.003
+    13700004: Cube.004
+    13700006: Cube.005
+    13700008: Cube.006
+    13700010: Cube.007
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
