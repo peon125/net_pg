@@ -9,18 +9,17 @@ public class Spade_EO : EnviromentObject
         if (!isGrabbed)
             return;
 
-        if (Input.GetKey(KeyCode.G))
+        if (beingUsed)
         {
             stopCoroutine = true;
 
-            Debug.Log(handIAmGrabbedBy.myVirtualHand.name);
-            handIAmGrabbedBy.myVirtualHand.transform.localPosition = Vector3.Lerp(handIAmGrabbedBy.myVirtualHand.localPosition, new Vector3(0, 1.75f, 7f), 20 * Time.deltaTime);
+            handIAmGrabbedBy.myVirtualHand.transform.localPosition = new Vector3(0, 1.75f, 7f);
         }
         else
         {
             stopCoroutine = false;
 
-            handIAmGrabbedBy.myVirtualHand.transform.localPosition = Vector3.Lerp(handIAmGrabbedBy.myVirtualHand.localPosition, new Vector3(0, 2.5f, 3.5f), 20 * Time.deltaTime);
+            handIAmGrabbedBy.myVirtualHand.transform.localPosition = new Vector3(0, 2.5f, 3.5f);
         }
     }
 

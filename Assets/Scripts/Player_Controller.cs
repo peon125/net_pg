@@ -33,29 +33,11 @@ public class Player_Controller : MonoBehaviour
         }
 
         Cursor.lockState = !Cursor.visible ? CursorLockMode.Locked : CursorLockMode.None;
-
-        if (Input.GetButton("RightClick"))
-        {
-            hands[1].Catch();
-        }
-        else if (Input.GetButtonUp("RightClick"))
-        {
-            hands[1].Decatch();
-        }
-
-        if (Input.GetButton("LeftClick"))
-        {
-            hands[0].Catch();
-        }
-        else if (Input.GetButtonUp("LeftClick"))
-        {
-            hands[0].Decatch();
-        }
     }
 
     private void FixedUpdate()
     {
-        for (int i = 0; i < bodies.Length - 1; i++)
+        for (int i = 1; i < bodies.Length - 1; i++)
         {
             bodies[i].MovePosition(pvc.bodies[i].position);
             bodies[i].MoveRotation(pvc.bodies[i].rotation);

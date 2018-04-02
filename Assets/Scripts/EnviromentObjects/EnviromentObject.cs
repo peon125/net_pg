@@ -8,12 +8,16 @@ public abstract class EnviromentObject : MonoBehaviour
 
     public bool grabbable;
 
+    [SerializeField]
+    protected GameObject actualObject;
+
     [HideInInspector]
     public Hand handIAmGrabbedBy;
 
     protected Renderer[] renderers;
     protected Color[] originalColors;
     protected bool isGrabbed;
+    protected bool beingUsed = false;
     protected bool stopCoroutine = false;
 
     public abstract void Grab(Hand hand);
@@ -21,7 +25,10 @@ public abstract class EnviromentObject : MonoBehaviour
 
     protected void Start()
     {
-        renderers = GetComponentsInChildren<Renderer>();
+        if (actualObject == null)
+            actualObject = gameObject;
+
+        renderers = actualObject.GetComponentsInChildren<Renderer>();
         originalColors = new Color[renderers.Length];
 
         for (int i = 0; i < renderers.Length; i++)
@@ -44,6 +51,16 @@ public abstract class EnviromentObject : MonoBehaviour
         {
             renderers[i].material.color = originalColors[i];
         }
+    }
+
+    public void Use()
+    {
+        beingUsed = true;
+    }
+
+    public void Deuse()
+    {
+        beingUsed = false;
     }
 
     protected IEnumerator Move(Transform what, Vector3 where)

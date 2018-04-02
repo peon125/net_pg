@@ -5,15 +5,78 @@ using UnityEngine;
 public class Hand : MonoBehaviour
 {
     public Transform myVirtualHand;
+    public string button_string;
 
     [SerializeField]
     GameObject handJoint_gameObject;
     [SerializeField]
     Joint handJoint;
 
-    Rigidbody selectedObject;
+    Rigidbody _selectedObject_rb;
+    Rigidbody selectedObject_rb
+    {
+        get
+        {
+            return _selectedObject_rb;
+        }
+
+        set
+        {
+            _selectedObject_rb = value;
+
+            if (value != null)
+            {
+                selectedObject_eo = value.GetComponentInParent<EnviromentObject>();
+            }
+            else
+            {
+                selectedObject_eo = null;
+            }
+        }
+    }
+    EnviromentObject selectedObject_eo;
     List<Coroutine> coroutines_list = new List<Coroutine>();
     bool catched = false;
+
+    void Update()
+    {
+        if (Input.GetButton("EnableCatching"))
+        {
+            if (selectedObject_rb && !catched && Input.GetButtonDown(button_string + "Click"))
+            {
+                Catch();
+            }
+            else if (selectedObject_rb && catched && Input.GetButtonDown(button_string + "Click"))
+            {
+                Decatch();
+            }
+        }
+        else
+        {
+            if (selectedObject_rb && Input.GetButton(button_string + "Click"))
+            {
+                Use();
+            }
+            else if (selectedObject_rb && Input.GetButtonUp(button_string + "Click"))
+            {
+                Deuse();
+            }
+        }
+
+        //if (Input.GetButton(button_string + "Use"))
+        //{
+        //    Catch();
+        //}
+        //else if (Input.GetButtonUp(button_string + "Use"))
+        //{
+        //    Decatch();
+        //}
+
+        if (!catched && myVirtualHand.localPosition != new Vector3(0, 0, 8.5f))
+        {
+            myVirtualHand.localPosition = new Vector3(0, 0, 8.5f);
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -27,9 +90,14 @@ public class Hand : MonoBehaviour
         if (catched || !othersRb)
             return;
 
-        selectedObject = othersRb;
+        if (selectedObject_rb)
+        {
+            selectedObject_eo.Dehighlight();
+        }
 
-        selectedObject.GetComponentInParent<EnviromentObject>().Highlight();
+        selectedObject_rb = othersRb;
+
+        selectedObject_eo.Highlight();
     }
 
     void OnTriggerExit(Collider other)
@@ -44,34 +112,26 @@ public class Hand : MonoBehaviour
         if (catched || !othersRb)
             return;
 
-        if (othersRb == selectedObject)
+        if (othersRb == selectedObject_rb)
         {
-            selectedObject.GetComponentInParent<EnviromentObject>().Dehighlight();
+            selectedObject_eo.Dehighlight();
         }
 
-        selectedObject = null;
-    }
-
-    void Update()
-    {
-        if (!catched && myVirtualHand.localPosition != new Vector3(0, 0, 8.5f))
-        {
-            myVirtualHand.localPosition = new Vector3(0, 0, 8.5f);
-        }
+        selectedObject_rb = null;
     }
 
     public void Catch()
     {
-        if (!selectedObject)
+        if (!selectedObject_rb)
         {
             handJoint.gameObject.SetActive(false);
         }
         else if (!catched)
         {
-            selectedObject.GetComponentInParent<EnviromentObject>().Grab(this);
+            selectedObject_eo.Grab(this);
             catched = true;
             handJoint.gameObject.SetActive(true);
-            handJoint.connectedBody = selectedObject;
+            handJoint.connectedBody = selectedObject_rb;
         }
     }
 
@@ -79,13 +139,23 @@ public class Hand : MonoBehaviour
     {
         catched = false;
 
-        if (selectedObject)
+        if (selectedObject_rb)
         {
-            selectedObject.GetComponentInParent<EnviromentObject>().Degrab();
+            selectedObject_eo.Degrab();
         }
 
-        selectedObject = null;
+        selectedObject_rb = null;
         handJoint.connectedBody = null;
         handJoint.gameObject.SetActive(false);
+    }
+
+    public void Use()
+    {
+        selectedObject_eo.Use();
+    }
+
+    public void Deuse()
+    {
+        selectedObject_eo.Deuse();
     }
 }

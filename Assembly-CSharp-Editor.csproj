@@ -53,7 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\Locomotion System Files\Locomotion System\Editor\LocomotionEditorClass.cs" />
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>D:/UnityProjects/net29-03-2018/net/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>D:/UnityProjects/net/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>D:/Program Files/Unity 2018.1.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

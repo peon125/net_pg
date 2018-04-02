@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\IdzDoGory.cs" />
      <Compile Include="Assets\Inverse Kinematics\Scripts\InverseKinematics.cs" />
      <Compile Include="Assets\Locomotion System Files\Character Controller Scripts\AccelerationCharacterController.cs" />
      <Compile Include="Assets\Locomotion System Files\Character Controller Scripts\AimLookCharacterController.cs" />
@@ -99,7 +100,7 @@
      <None Include="Assets\Locomotion System Files\Locomotion System\UnlitVertexColor.shader" />
      <None Include="Assets\Locomotion System Files\Characters\Heron Artwork\Vegetation-TwoPass.shader" />
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>D:/UnityProjects/net29-03-2018/net/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>D:/UnityProjects/net/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>D:/Program Files/Unity 2018.1.0b10/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
